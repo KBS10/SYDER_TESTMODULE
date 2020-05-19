@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="아이피를 입력해주세요."
+        android:inputType="textPersonName"
+        android:text="13.124.124.67"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputPORT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="포트번호를 입력해주세요."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/inputIP"
+        app:layout_constraintTop_toBottomOf="@+id/inputIP" />
+
+    <Button
+        android:id="@+id/buttonConnect"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="서버 연결"
+        app:layout_constraintBottom_toBottomOf="@+id/inputPORT"
+        app:layout_constraintStart_toEndOf="@+id/inputPORT" />
+
+    <TextView
+        android:id="@+id/textError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="서버 접속 에러!!"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carGroup" />
+
+    <RadioGroup
+        android:id="@+id/carGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPORT">
+
+        <RadioButton
+            android:id="@+id/radioCar1"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1호차" />
+
+        <RadioButton
+            android:id="@+id/radioCar2"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2호차" />
+
+        <RadioButton
+            android:id="@+id/radioCar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3호차" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
